@@ -1,7 +1,7 @@
-export const Modal = () =>{
+export const Modal = ({p}) =>{
     return(
         <div>
-            <h1>Hola soy Modal</h1>
+            <h1>Hola soy Modal {p?.title} </h1>
         </div>
     )
 }
