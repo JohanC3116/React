@@ -1,14 +1,17 @@
+import { useParams, useSearchParams } from "react-router-dom";
 import imagenLocal from "../assets/react.svg";
 
 import { BtnVolver } from "../components/ui/button/BtnVolver";
 
 export const ImagenesPage = () => {
+ const [searchParams] = useSearchParams()
+ const src = searchParams.get("src")
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-10">
       <h1 className="text-3xl font-bold text-center">Imagenes con React</h1>
       <section className="space-y-2">
         <h2 className="text-xl font-semibold">Imagenes locales importadas</h2>
-        <img src={imagenLocal} alt="" className="h-40 w-40 overflow-hidden" />
+        <img src={src} alt="" className="h-40 w-40 overflow-hidden" />
       </section>
       <section className="space-y-2">
         <h2 className="text-xl font-semibold">Imagen URL</h2>

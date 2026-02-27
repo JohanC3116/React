@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { Link } from "react-router-dom";
 
 export const Cardlist = () => {
+  const urlImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBApcq1Nfd22vVlm1HiaJKITzLYtI3jDECJg&s"
   const temaTeoria = [
     {
       title: "useEffect",
@@ -9,7 +10,11 @@ export const Cardlist = () => {
     },
     {
       title: "imagenes",
-      to: "/imagenes"
+      to: `/imagenes?src=${urlImage}`,
+    },
+    {
+      title: "rutas anidadas",
+      to: "rutasanidadas",
     },
   ];
   return (
