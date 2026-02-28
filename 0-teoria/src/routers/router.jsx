@@ -22,28 +22,34 @@ export const MyRoutes = () => (
   <BrowserRouter>
     <Routes>
       {/* <Route path="/" element={<LayoutMain></LayoutMain>}> */}
-        <Route index element={<Home></Home>}></Route>
-        <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/useffect" element={<UseEffect1></UseEffect1>}></Route>
-        <Route path="/imagenes" element={<ImagenesPage></ImagenesPage>}></Route>
-        <Route path="formularios" element={<FormulariosPage></FormulariosPage>}></Route>
-        <Route path="zustandpage" element={<ZustandPage></ZustandPage>}></Route>
-        <Route path="crudsupabase" element={<CrudSupabase></CrudSupabase>}></Route>
+      <Route index element={<Home></Home>}></Route>
+      <Route path="/login" element={<Login></Login>}></Route>
+      <Route path="/useffect" element={<UseEffect1></UseEffect1>}></Route>
+      <Route path="/imagenes" element={<ImagenesPage></ImagenesPage>}></Route>
+      <Route
+        path="formularios"
+        element={<FormulariosPage></FormulariosPage>}
+      ></Route>
+      <Route path="/zustandpage" element={<ZustandPage></ZustandPage>}></Route>
+      <Route
+        path="/crudsupabase"
+        element={<CrudSupabase></CrudSupabase>}
+      ></Route>
+      <Route
+        path="/rutasanidadas"
+        element={<RutasAnidadasPage></RutasAnidadasPage>}
+      >
         <Route
-          path="/rutasanidadas"
-          element={<RutasAnidadasPage></RutasAnidadasPage>}
-        >
-          <Route
-            index
-            element={<Navigate to="perfil/20" replace></Navigate>}
-          ></Route>
-          <Route path="perfil/:id" element={<PerfilPage></PerfilPage>}></Route>
-          <Route
-            path="configuracion"
-            element={<ConfiguracionPage></ConfiguracionPage>}
-          ></Route>
-        </Route>
-        <Route path="/apis" element={<ApisPage></ApisPage>}></Route>
+          index
+          element={<Navigate to="perfil/20" replace></Navigate>}
+        ></Route>
+        <Route path="perfil/:id" element={<PerfilPage></PerfilPage>}></Route>
+        <Route
+          path="configuracion"
+          element={<ConfiguracionPage></ConfiguracionPage>}
+        ></Route>
+      </Route>
+      <Route path="/apis" element={<ApisPage></ApisPage>}></Route>
       {/* </Route> */}
       <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
     </Routes>

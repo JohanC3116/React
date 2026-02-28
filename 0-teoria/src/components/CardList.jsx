@@ -5,9 +5,10 @@ import { Modal } from "./Modal";
 import { useMenuStore } from "../store/MenuStore";
 
 export const Cardlist = () => {
-  const {setItemSelect} = useMenuStore()
-  
-  const urlImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBApcq1Nfd22vVlm1HiaJKITzLYtI3jDECJg&s"
+  const { setItemSelect } = useMenuStore();
+
+  const urlImage =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBApcq1Nfd22vVlm1HiaJKITzLYtI3jDECJg&s";
   const temaTeoria = [
     {
       title: "useEffect",
@@ -23,26 +24,27 @@ export const Cardlist = () => {
     },
     {
       title: "apis",
-      to: "/apis"
+      to: "/apis",
     },
     {
       title: "formularios",
-      to: "/formularios"
+      to: "/formularios",
     },
     {
       title: "zustand",
-      to: "/zustandpage"
+      to: "/zustandpage",
     },
     {
       title: "crudsupabase",
-      to: "/crudsupabase"
-    }
+      to: "/crudsupabase",
+    },
   ];
   return (
     <div className="flex flex-col gap-4">
       {temaTeoria.map((item, index) => {
         return (
-          <Link onClick={()=> setItemSelect(item)}
+          <Link
+            onClick={() => setItemSelect(item)}
             to={item.to}
             key={index}
             className="group w-full bg-[#151515] p-5 rounded-xl border-3 border-[#333] flex justify-between hover:border-blue-700 hover:cursor-pointer hover:transition duration-300 ease-in-out"
